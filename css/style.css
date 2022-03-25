@@ -1,0 +1,357 @@
+body{
+    font-family: "Open Sans", sans-serif;
+}
+/* start navbar */
+:root{
+    --mainColor:#f25454;
+    --secondaryColor:#fff;
+}
+
+.nav-icon a i{
+    color:black ;
+    padding: 0 1rem;
+  background-color: transparent;
+}
+.navbar{
+    z-index: 1100;
+}
+
+.nav-icon a:hover i{
+    color: var(--mainColor);
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    padding: 0 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link.active:hover{
+    color: var(--mainColor);
+}
+
+/* start home */
+.home-icon{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+.home-icon i{
+    color: var(--secondaryColor);
+    font-size: 1rem;
+}
+.home .moving{
+    position: absolute;
+    background: transparent;
+    border: 1px solid #fff;
+        width: 1.75rem;
+        height: 3rem;
+        border-radius: 13px;
+        bottom:2rem;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        transition: all 0.3s;
+}
+ .home .moving a{
+    width: 1.5rem;
+    height: 2.25rem;
+}
+.dot{
+    position: absolute;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    animation: dot-moving 1.7s infinite ease;
+}
+@keyframes dot-moving{
+    
+        0% {
+            top:0.5rem;
+            opacity: 0;
+        }
+        40% {
+            opacity: 1;
+        }
+        100% {
+            top: 1rem;
+            opacity: 0;
+        }
+    }
+
+.home .carousel{
+  
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+}
+.carousel-caption h1{
+    font-size: 5rem;
+}
+/* end home */
+/* start about */
+.about{
+    margin: 7rem 0 ;
+  
+}
+.section-top h3{
+    color: #eeeeee;
+    font-size: 4.5rem;
+ 
+    font-weight: bold;
+ z-index: 1;
+    top:1rem
+}
+.section-top h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+    position: relative;
+   z-index: 2;
+}
+.section-top h2::before{
+    
+    content: " ";
+    position: absolute;
+  background-color: black;
+    width: 5%;
+    height: 1px;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 1s;
+}
+.section-top:hover h2::before{
+    width: 7%;
+}
+
+.progress-bar{
+    background-color: var(--mainColor);
+}
+.mydetails .pro{
+    padding: 1rem 0;
+}
+.progress{
+    height: 5px;
+}
+/* end about */
+/* start team */
+.team{
+    margin: 7rem 0;
+}
+.team-card{
+    overflow: hidden;
+}
+.team-card .team-image{
+    overflow: hidden;
+    position: relative;
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 3px;
+    text-align: center; 
+    opacity: 0;
+    transition: all 0.3s;
+    background-color: rgba(242, 84, 84, 0.85);
+}
+.team-overlay:hover{
+opacity: 1;
+}
+ .team-icon{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+ } 
+.team-image img{
+    transition: all 0.3s;
+}
+.team-icon a{
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: var(--secondaryColor);
+}
+.team-image:hover img{
+    transform: scale(1.1);
+}
+
+.team-card:hover h5{
+    color: var(--mainColor);
+}
+.info-btn{
+    background-color: var(--mainColor);
+    color: var(--secondaryColor);
+    padding: 0.5rem 1rem;
+}
+.info-btn:hover{
+    color: var(--secondaryColor);
+    background-color: #f25454;
+}
+.info{
+    margin: 7rem 0;
+}
+
+/* end info  */
+/* start services */
+.services{
+    padding: 7rem 0;
+    background-color: #fafafa;
+}
+
+.ser-icon{
+    display: block;
+    font-size:1.5rem;
+    margin-right: 1rem;
+    text-align: center;
+    color: var(--mainColor);
+}
+.services-card:hover h3{
+    color: var(--mainColor);
+}
+.services-card h3{
+    font-size: 1.25rem;
+}
+.services-contect{
+    margin-left: 1rem;
+}
+.client{
+    padding: 7rem 0;
+}
+.car-itme p{
+    text-align: center;
+}
+/* end client */
+/* start contact */
+.contact{
+    padding: 7rem 0;
+    background-color: #fafafa;
+}
+.cont-icon{
+    color: var(--mainColor);
+    font-size: 2.25rem;
+    text-align:center;
+}
+.contact-card{
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.contact-card h4{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.contact-card:hover h4{
+    color: var(--mainColor);
+}
+
+
+/* from */
+.form-area{
+    padding-bottom:1rem ;
+}
+.btn-contact{
+background-color: var(--mainColor);
+color: var(--secondaryColor);
+padding: 0.5rem 1.5rem;
+}
+.btn-contact:hover{
+    background-color: #f77979;
+    color: var(--secondaryColor);
+}
+/* end from */
+/* start footeer */
+.footer-top{
+    text-align: center;
+    background-color: #222;
+    padding: 6rem 0;
+}
+.footer-top h5{
+    color: var(--secondaryColor);
+    font-weight: bold;
+}
+.footer-logo{
+padding-bottom: 2rem;
+}
+.footer-top a{
+    text-decoration: none;
+    color: #b0b0b0;
+
+}
+.footer-top a:hover {
+    color: var(--mainColor);
+}
+.footer-text p{
+    color: #b0b0b0;
+}
+.skil{
+    display: block;
+    margin-right:0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 2px 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 3px;
+border: 1px solid #b0b0b0;
+}
+.skil:hover{
+    border: 1px solid var(--mainColor);
+}
+.up{
+    background-color:rgba(242, 84, 84, 0.5) ;
+    line-height: 2.5rem;
+    position: absolute;
+    display: block;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    top: -25px;
+    cursor: pointer !important;
+    border-radius: 50%;
+    color: #fff !important;
+    font-size: 1rem;
+    text-align: center;
+}
+.up:hover{
+    background-color: #f25454;
+}
+
+.footer-down{
+    background-color:#1a1a1a;
+    padding: 1.5rem 0;
+}
+.footer-icon i{
+    color: var(--secondaryColor);
+    padding: 0 1rem;
+    font-size: 1.25rem;
+}
+.footer-icon i:hover{
+    color: var(--mainColor);
+}
+.copyright {
+    color:#b0b0b0;
+}
+.copyright a{
+    text-decoration: none;
+    color: var(--secondaryColor);
+    font-weight: bold;
+}
+.copyright a:hover{
+    color: var(--mainColor);
+}
